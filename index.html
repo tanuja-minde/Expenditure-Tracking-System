@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <title>Money Tracking</title>
+    </head>
+    <style>
+        .myslides{
+            display: none;
+        }
+
+    </style>
+    <div class = "cont" style="margin-top: -150px;">
+        <ul>
+            <li><div class="dropdown">
+                    <button class="dropbtn" style="color: white;"><pre>About Us</pre>
+                    <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                            <a href="#about">Team</a>
+                            <a href="#vision">Vision & Mission</a>
+                            <a href="#two">Values</a>
+                    </li>
+            <li><a href = "#" class="active" style="color: white;"><pre>Home</pre></a></li>
+            <li class="photo"><a href="#"><img src="./assets/images/money.jpg" height="60px" width="100px" style="margin-top: 0px;margin-left: 10px;"></a></li>
+        </ul>
+    </div>
+    
+    
+    <div class="home" style="margin-top: 150px;">
+        <br><br>
+        <button onclick="topFunction()" id="myBtn" title="Go to top" style="border-radius:50%;">^</button>
+        <h1 align = "center" style="color: white; font-family: Arial, Helvetica, sans-serif;">Welcome to Money Tracking</h1>
+        <h3 align = "center" style="color: white;"><pre>The Platform to Keep an Eye on your Transactions</pre></h3><hr><br><br>
+        <form action = "login.php"><button type = "submit" class="button">Log In</button></form>
+    </div>
+    
+    <div class="image" style="margin-top: 250px;">
+        <img src="./assets/images/1.jpg"  class = "myslides" alt="Signature_move" height="600px" width="1000px" style="margin-left: 150px;">
+        <img src="./assets/images/2.jpg"  class = "myslides" alt="Signature_move" height="600px" width="1000px" style="margin-left: 150px;">
+        
+    </div>
+    <script>
+            var myIndex = 0;
+            carousel();
+    
+            function carousel() {
+            var i;
+            var x = document.getElementsByClassName("myslides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+            }
+        </script>
+
+        <script>
+            var mybutton = document.getElementById("myBtn");
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+            }
+            
+            function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            }
+        </script>
+    
+    
+    
+        <div id = "about">
+            <h1 align = "center" style="font-family: Arial, Helvetica, sans-serif">About Us</h1>
+        </div>
+        <div id="team">
+            <h2 align="center" style="font-family:sans-serif">Team</h2>
+        </div>
+    <div class="row">    
+        <div class="column" id="one">
+            <img src="./assets/images/1.jpg" height="150px"><br>
+                <p id="sln">Shalini Kumari</p>
+            
+        </div>
+        <div class="column">
+            <img src="./assets/images/2.jpg" height="150px"><br>
+            <p id="tp">Tanuja Minde</p>
+        </div>
+        <div class="column">
+                <img src="./assets/images/3.jpg" height="150px"><br>
+                <p id="bns">Bonish Agarwal</p>
+        </div>
+        <div class="column">
+                <img src="./assets/images/4.jpg" height="150px"><br>
+                <p id="mvg">Mayuresh Gawai</p>
+        </div>
+        
+    </div>
+    <div id="vision">
+        <h2 align = "center" style="font-family:sans-serif">Vision and Mission</h2>
+    </div>
+    <div class="row2">   
+         
+            <div class="column2" id="one">
+                <h3 align = "center" style="font-family:sans-serif">Vision</h3>
+                <p align = "justify" style="font-family:sans-serif">Our Vision is to Satisfy customer with an working 
+                and reliable product. We want to provide a site that will service customer in reliable way and will be useful
+                without any complicated User Interfaces. </p>
+            </div>
+            <div class="column2">
+                <h3 align = "center" style="font-family:sans-serif">Mission</h3>
+                <p align = "justify" style="font-family:sans-serif">Our Mission is to create an website that will serve user the
+                daily transaction records and It will keep all details of user purchases and final total cost that user spent on
+            daily needs. In our today's complicated life we can't keep proper records of transactions we performed in a whole day.
+            Our Site is to provide you an easiest way to store all your records that means you a lot an useful to analyze 
+            your expenditure.</p>
+            </div>
+    </div>
+
+
+        <div id="two">
+            <img src="./assets/images/values.jpg" height="710px" width="1150px" style="margin-left: 90px;">
+
+        </div>
+        
+        <div id="three">
+            
+        </div>
+    </div>
+        <footer class="cont3">
+                <p align = "center">@copyright Money Tracking Team</p>
+        </footer>
+
+    
+</html>
